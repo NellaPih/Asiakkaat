@@ -1,0 +1,4 @@
+#Fri Apr 17 11:53:09 EEST 2020
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=dynamic
