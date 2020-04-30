@@ -1147,3 +1147,10 @@ java.lang.RuntimeException
 	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(Unknown Source)
 	at java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
 	at java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.core.resources 2 2 2020-04-30 18:31:40.685
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-04-30 18:31:40.686
+!MESSAGE The project description file (.project) for 'Lomake' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2020-04-30 18:31:40.687
+!MESSAGE The project description file (.project) for 'Ohjelmointi2' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.

@@ -62,7 +62,18 @@ public class Asiakkaat extends HttpServlet {
 	}
 
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Asiakkaat.doDelete()");
+		System.out.println("Asiakkaat.doDelete()");	
+		String pathInfo = request.getPathInfo();	//haetaan kutsun polkutiedot, esim. /ABC-222		
+		System.out.println("polku: "+pathInfo);
+		String poistettavaId = pathInfo.replace("/", "");		
+		response.setContentType("application/json");
+		PrintWriter out = response.getWriter();
+		Dao dao = new Dao();			
+		if(dao.poistaAsiakas(poistettavaId)){ //metodi palauttaa true/false
+			out.println("{\"response\":1}");
+		}else{
+			out.println("{\"response\":0}");
+		}	
 	}
 
 }

@@ -108,5 +108,22 @@ public class Dao {
 		}				
 		return paluuArvo;
 	}
+	
+	public boolean poistaAsiakas(String id){ //Oikeassa el‰m‰ss‰ tiedot ensisijaisesti merkit‰‰n poistetuksi.
+		boolean paluuArvo=true;
+		int intId = Integer.parseInt(id);
+		sql="DELETE FROM asiakkaat WHERE asiakas_id=?";						  
+		try {
+			con = yhdista();
+			stmtPrep=con.prepareStatement(sql); 
+			stmtPrep.setInt(1, intId);			
+			stmtPrep.executeUpdate();
+	        con.close();
+		} catch (Exception e) {				
+			e.printStackTrace();
+			paluuArvo=false;
+		}				
+		return paluuArvo;
+	}
 
 }
