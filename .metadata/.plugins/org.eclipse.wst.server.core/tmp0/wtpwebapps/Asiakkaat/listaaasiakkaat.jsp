@@ -12,6 +12,9 @@
 <table id="listaus">
 	<thead>	
 		<tr>
+			<th colspan="4"><span id="uusiAsiakas">Lis‰‰ uusi asiakas</span></th>
+		</tr>
+		<tr>
 			<th>Hakusana:</th>
 			<th colspan="2"><input type="text" id="hakusana"></th>
 			<th class="nappi"><input type="button" value="HAE" id="hakunappi"></th>
@@ -28,6 +31,10 @@
 </table>
 <script>
 $(document).ready(function(){
+	
+	$("#uusiAsiakas").click(function(){
+		document.location="lisaaasiakas.jsp";
+	});
 	
 	haeAsiakkaat();
 	$("#hakunappi").click(function(){		

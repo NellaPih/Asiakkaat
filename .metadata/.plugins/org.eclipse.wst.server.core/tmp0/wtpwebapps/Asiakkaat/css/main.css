@@ -18,8 +18,13 @@ th {
 
 body {
 	margin: 50px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .nappi {
 	text-align: center;
+}
+
+#uusiAsiakas, #takaisin {
+	cursor: pointer;
 }
