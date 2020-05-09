@@ -59,7 +59,7 @@ $(document).ready(function(){
 			},	
 			sposti:  {
 				required: true,
-				minlength: 4
+				email: true
 			}	
 		},
 		messages: {
@@ -77,13 +77,14 @@ $(document).ready(function(){
 			},
 			sposti: {
 				required: "Puuttuu",
-				minlength: "Liian lyhyt",
+				minlength: "Ei kelpaa",
 			}
 		},			
 		submitHandler: function(form) {	
 			lisaaTiedot();
 		}		
-	}); 	
+	});
+	$("#etunimi").focus();
 });
 
 function lisaaTiedot(){	
