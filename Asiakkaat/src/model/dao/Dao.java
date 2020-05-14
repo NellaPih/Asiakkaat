@@ -136,7 +136,7 @@ public class Dao {
 			stmtPrep.setString(2, asiakas.getSukunimi());
 			stmtPrep.setString(3, asiakas.getPuhelin());
 			stmtPrep.setString(4, asiakas.getSposti());
-			stmtPrep.setInt(5, id);
+			stmtPrep.setInt(5, id); // tai stmtPrep.setInt(5, asiakas.getAsiakas_id());
 			stmtPrep.executeUpdate();
 	        con.close();
 		} catch (Exception e) {				
@@ -171,5 +171,23 @@ public class Dao {
 		}		
 		return asiakas;		
 	}
+	
+	public boolean poistaKaikkiAsiakkaat(String pwd){ //Oikeassa el‰m‰ss‰ tiedot ensisijaisesti merkit‰‰n poistetuksi.
+		boolean paluuArvo=true;
+		if(pwd!="nimda") {
+			return false;
+		}			
+		sql="DELETE FROM asiakkaat";						  
+		try {
+			con = yhdista();
+			stmtPrep=con.prepareStatement(sql);						
+			stmtPrep.executeUpdate();
+	        con.close();
+		} catch (Exception e) {				
+			e.printStackTrace();
+			paluuArvo=false;
+		}				
+		return paluuArvo;
+	}	
 
 }

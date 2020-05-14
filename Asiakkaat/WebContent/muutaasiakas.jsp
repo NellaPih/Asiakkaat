@@ -44,6 +44,9 @@ $(document).ready(function(){
 	$("#takaisin").click(function(){
 		document.location="listaaasiakkaat.jsp";
 	});
+	
+	$("#etunimi").focus();//viedään kursori etunimi-kenttään sivun latauksen yhteydessä
+	
 	//Haetaan muutettavan auton tiedot. Kutsutaan backin GET-metodia ja välitetään kutsun mukana muutettavan tiedon id
 	//GET /autot/haeyksi/rekno
 	var asiakas_id = requestURLParam("asiakas_id"); //Funktio löytyy scripts/main.js 	
